@@ -1,0 +1,191 @@
+/* --- Réinitialisation et Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --red-morocco: #c1272d;
+    --green-morocco: #006233;
+    --dark: #1a1a1a;
+    --light: #f4f4f4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- En-tête (Header) --- */
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--red-morocco);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--green-morocco);
+}
+
+/* --- Section Héro (Accueil) --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080/006233/ffffff?text=Image+de+Fond+Equipe+du+Maroc') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--red-morocco);
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: var(--red-morocco);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--green-morocco);
+}
+
+/* --- Sections Générales --- */
+section {
+    padding: 80px 5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.section-light {
+    background-color: white;
+}
+
+.section-dark {
+    background-color: var(--light);
+}
+
+/* --- Parcours (Matchs) --- */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.match-card {
+    background-color: white;
+    border-left: 5px solid var(--green-morocco);
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0 5px 5px 0;
+}
+
+.match-card h3 {
+    color: var(--red-morocco);
+    margin-bottom: 10px;
+}
+
+.match-card p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* --- Équipe (Joueurs) --- */
+.players-grid {
+    display: grid;
+    /* La grille s'adapte automatiquement à la taille de l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.player-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.player-card:hover {
+    transform: translateY(-10px); /* Petit effet de soulèvement au survol */
+}
+
+.player-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.player-info {
+    padding: 20px;
+}
+
+.player-info h3 {
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.player-info p {
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Pied de page --- */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
